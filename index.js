@@ -20,7 +20,7 @@ const start = async () => {
         }));
   
       consign()
-      .include('adapters/routes')
+      .include('adapters/api/routes')
       .into(app);
 
       app.listen(3000, () => console.log('listening port 3000'));

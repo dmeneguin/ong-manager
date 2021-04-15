@@ -17,7 +17,7 @@ exports.put = async (id, request, reply) => {
 }
 
 exports.patch = async (id, request, reply) => {
-    return await ongService.update(id, request.body);
+    return await ongService.patch(id, request.body);
 }
 
 exports.delete = async (id, request, reply) => {

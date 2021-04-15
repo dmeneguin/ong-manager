@@ -42,13 +42,26 @@ exports.findById = async (id) => {
     }
 }
 
-exports.update = async (id, newOng) => {
+exports.patch = async (id, newOng) => {
     try{
-        const ong = await Ong.update(newOng, {
+        return await Ong.update(newOng, {
             where: {
               id: id
             }
           });
+    } catch (err) {
+        console.log(err);
+        const error = new Error('An error ocurred while updating ong');
+        error.statusCode = 500; 
+        throw error;
+    }
+}
+
+exports.update = async (id, newOng) => {
+    try{
+        const ong = await Ong.findOne({id});
+        ong.set(newOng);
+        ong.save();
         return ong;
     } catch (err) {
         console.log(err);

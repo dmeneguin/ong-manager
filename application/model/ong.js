@@ -10,6 +10,8 @@ const Ong = sequelize.define('ong', {
   },
   name: Sequelize.STRING,
   description: Sequelize.STRING,
+  email: Sequelize.STRING,
+  phone: Sequelize.STRING,
 });
 
 module.exports = Ong;

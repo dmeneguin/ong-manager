@@ -1,6 +1,8 @@
 const express = require('express');
 const consign = require('consign');
 const sequelize = require('./config/database');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger_output.json');
 
 const start = async () => {
 
@@ -18,6 +20,7 @@ const start = async () => {
       app.use(express.urlencoded({
           extended: true
         }));
+      app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
   
       consign()
       .include('adapters/api/routes')

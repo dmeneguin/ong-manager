@@ -12,11 +12,11 @@ exports.getById = async (id, request, reply) => {
     return await ongService.findById(id);
 }
 
-exports.put = async (id, request, reply) => {
+exports.put = async (id, request, reply) => {  
     return await ongService.update(id, request.body);
 }
 
-exports.patch = async (id, request, reply) => {
+exports.patch = async (id, request, reply) => {    
     return await ongService.patch(id, request.body);
 }
 

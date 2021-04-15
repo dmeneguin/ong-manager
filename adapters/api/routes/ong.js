@@ -12,6 +12,16 @@ const invalidRequestReply = (request, reply, errors) => {
 module.exports = app => {
 
     app.post('/ong', validators.registerValidator(), async (request, reply) => {
+    /*  #swagger.parameters['post ong object'] = {
+            in: 'body',
+            description: "New ong values",
+            schema: {
+                "$name": "new ong",
+                "$description": "ong description",
+                "$email": "aaa@aaa.com",
+                "$phone": "(19) 99999-9999"
+            }
+    } */         
         const errors = validators.validateRequest(request);
         if (errors.length > 0) {
             return invalidRequestReply(request,reply,errors);
@@ -31,6 +41,16 @@ module.exports = app => {
     })
 
     app.put('/ong/:id', validators.updateValidator(), async (request, reply) => {
+    /*  #swagger.parameters['put ong object'] = {
+            in: 'body',
+            description: "New ong values",
+            schema: {
+                "$name": "new ong",
+                "$description": "ong description",
+                "$email": "aaa@aaa.com",
+                "$phone": "(19) 99999-9999"
+            }
+    } */         
         const errors = validators.validateRequest(request);
         if (errors.length > 0) {
             return invalidRequestReply(request,reply,errors);
@@ -40,6 +60,16 @@ module.exports = app => {
     })
 
     app.patch('/ong/:id', validators.patchValidator(), async (request, reply) => {
+    /*  #swagger.parameters['patch ong object'] = {
+            in: 'body',
+            description: "New ong values",
+            schema: {
+                "$name": "new ong",
+                "$description": "ong description",
+                "$email": "aaa@aaa.com",
+                "$phone": "(19) 99999-9999"
+            }
+    } */         
         const errors = validators.validateRequest(request);
         if (errors.length > 0) {
             return invalidRequestReply(request,reply,errors);

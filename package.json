@@ -7,7 +7,9 @@
     "swagger-autogen": "node swagger.js",
     "start": "nodemon index.js",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "migration": "npx sequelize db:migrate",
+    "migration:undo": "npx sequelize db:migrate:undo"
   },
   "author": "",
   "license": "ISC",

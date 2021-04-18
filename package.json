@@ -10,7 +10,7 @@
     "test:watch": "jest --watch",
     "migration": "npx sequelize db:migrate",
     "migration:undo": "npx sequelize db:migrate:undo",
-    "lint": "eslint . --fix"
+    "lint": "eslint --fix ."
   },
   "author": "",
   "license": "ISC",

@@ -18,7 +18,7 @@ describe('Getting data from API - ONG', () => {
     // ...
   });
 
-  afterAll(async () => {
+  afterAll(async (done) => {
     await sequelize.close();
     done();
   });

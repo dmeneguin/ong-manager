@@ -10,7 +10,7 @@
     "test:watch": "jest --watch",
     "migration": "npx sequelize db:migrate",
     "migration:undo": "npx sequelize db:migrate:undo",
-    "lint": "eslint . --fix"
+    "lint": "eslint --fix ."
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,7 @@
     "eslint-plugin-jest": "^24.3.5",
     "express": "^4.17.1",
     "express-validator": "^6.10.0",
+    "iconv-lite": "^0.6.2",
     "mysql2": "^2.2.5",
     "sequelize": "^6.5.0",
     "swagger-autogen": "^2.7.9",
